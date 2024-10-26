@@ -1,0 +1,21 @@
+Gift
+
+Gift es un proyecto basado en representaciones gráficas de flores, desarrollado utilizando HTML, SCSS y JavaScript. Este proyecto es una evolución de ideas públicas originales, con varias actualizaciones y mejoras personalizadas.
+
+Descripción del proyecto
+
+Este proyecto se centra en la creación de una experiencia visual dinámica que simula el crecimiento y el movimiento de flores y césped. Además, incorpora varios efectos adicionales para mejorar la interactividad y la estética de la página.
+
+Características principales:
+- Corrección de errores: Se ha corregido un error que afectaba el efecto de aparición en una de las plantas.
+- Actualización del desarrollo original: Las flores y el césped ahora tienen movimiento continuo y un efecto de crecimiento fluido sin esepción e ninguna hoja.
+- Efectos visuales adicionales: 
+- Estrellas fugaces cruzan el cielo de fondo.
+- Efecto al mover el cursor sobre el área de la página.
+- Una luna llena que actúa como un botón play-stop para controlar la música.
+- Icono personalizado de la página: Representa la temática floral.
+- Reproducción aleatoria de canciones: Se seleccionan canciones al azar para la experiencia sonora, con un aviso para interactuar con la luna si el usuario no realiza ninguna acción.
+  
+Alerta interacción:
+- Si no hay interacción por parte del usuario, aparece un aviso solicitando que toque la luna llena y así reproducir la música.
+
