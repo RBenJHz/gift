@@ -9,15 +9,18 @@
 }
 
 body {
+background-color: var(--dark-color);
+}
+
+.global-container {
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    min-height: 100vh;
-    background-color: var(--dark-color);
+    min-height: 100vh;   
     overflow: hidden;
     perspective: 1000px;
     width: 100%;
-    height: auto;
+    height: 80%;  
 }
 
 
@@ -1318,7 +1321,7 @@ body {
 
 /* Para pantallas de tablets (de 768px a 1024px) */
 @media (max-width: 1024px) {
-    body {
+    global-container {
         width: 100%;  // Ocupa el 100% del ancho disponible
         height: auto; // Mantiene la proporción en altura
         padding: 10px;  // Opcional: añade padding si lo deseas
@@ -1327,7 +1330,7 @@ body {
 
 /* Para pantallas de smartphones (de 480px a 768px) */
 @media (max-width: 768px) {
-    body {
+    global-container {
         width: 100%;   // Asegura que el contenedor ocupe el ancho completo de la pantalla
         height: auto;  // Ajusta la altura para mantener proporciones
         margin: 0 auto;  // Centra el contenido en pantallas pequeñas
@@ -1336,7 +1339,7 @@ body {
 
 /* Para pantallas más pequeñas que smartphones (menos de 480px) */
 @media (max-width: 480px) {
-    body {
+    global-container {
         width: 100%;   // Se asegura de que ocupe todo el ancho
         height: auto;  // Mantiene proporciones
         margin: 0;     // Asegura que no haya margen en pantallas muy pequeñas
