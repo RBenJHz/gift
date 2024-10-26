@@ -16,6 +16,8 @@ body {
     background-color: var(--dark-color);
     overflow: hidden;
     perspective: 1000px;
+    width: 100%;
+    height: auto;
 }
 
 
@@ -1314,3 +1316,29 @@ body {
     left: 10%;
 }
 
+/* Para pantallas de tablets (de 768px a 1024px) */
+@media (max-width: 1024px) {
+    body {
+        width: 100%;  // Ocupa el 100% del ancho disponible
+        height: auto; // Mantiene la proporción en altura
+        padding: 10px;  // Opcional: añade padding si lo deseas
+    }
+}
+
+/* Para pantallas de smartphones (de 480px a 768px) */
+@media (max-width: 768px) {
+    body {
+        width: 100%;   // Asegura que el contenedor ocupe el ancho completo de la pantalla
+        height: auto;  // Ajusta la altura para mantener proporciones
+        margin: 0 auto;  // Centra el contenido en pantallas pequeñas
+    }
+}
+
+/* Para pantallas más pequeñas que smartphones (menos de 480px) */
+@media (max-width: 480px) {
+    body {
+        width: 100%;   // Se asegura de que ocupe todo el ancho
+        height: auto;  // Mantiene proporciones
+        margin: 0;     // Asegura que no haya margen en pantallas muy pequeñas
+    }
+}

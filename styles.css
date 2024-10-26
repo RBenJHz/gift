@@ -17,6 +17,8 @@ body {
   background-color: var(--dark-color);
   overflow: hidden;
   perspective: 1000px;
+  width: 100%;
+  height: auto;
 }
 
 .night {
@@ -1054,4 +1056,29 @@ body {
   animation-duration: 6s;
   top: 80%;
   left: 10%;
+}
+
+/* Para pantallas de tablets (de 768px a 1024px) */
+@media (max-width: 1024px) {
+  body {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+}
+/* Para pantallas de smartphones (de 480px a 768px) */
+@media (max-width: 768px) {
+  body {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+/* Para pantallas más pequeñas que smartphones (menos de 480px) */
+@media (max-width: 480px) {
+  body {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
 }/*# sourceMappingURL=styles.css.map */
