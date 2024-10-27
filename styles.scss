@@ -24,7 +24,7 @@ background-color: var(--dark-color);
 }
 
 
-//Diseño fondo nocturno
+/* Fondo nocturno */
 .night {
     position: fixed;
     left: 50%;
@@ -34,12 +34,172 @@ background-color: var(--dark-color);
     height: 100%;
     filter: blur(0.1vmin);
     background-image: radial-gradient(ellipse at top, transparent 0%, var(--dark-color)),
-        radial-gradient(ellipse at bottom, var(--dark-color), rgba(145, 233, 255, 0.2)),
-        repeating-linear-gradient(220deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 19px, transparent 19px, transparent 22px),
-        repeating-linear-gradient(189deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 19px, transparent 19px, transparent 22px),
-        repeating-linear-gradient(148deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 19px, transparent 19px, transparent 22px),
-        linear-gradient(90deg, rgb(0, 255, 250), rgb(240, 240, 240));
+        radial-gradient(ellipse at bottom, var(--dark-color), rgba(45, 100, 120, 0.2)),
+        linear-gradient(90deg, rgb(0, 125, 130), rgb(120, 120, 120));
+    overflow: hidden;
 }
+
+/* Capa de estrellas (primera capa) */
+.night::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    background-color: white;
+    opacity: 0.5;
+    box-shadow:
+    12vw 54vh white,   /* Estrella 1 */
+    25vw 16vh white,   /* Estrella 2 */
+    48vw 38vh white,   /* Estrella 3 */
+    10vw 67vh white,   /* Estrella 4 */
+    70vw 34vh white,   /* Estrella 5 */
+    83vw 59vh white,   /* Estrella 6 */
+    40vw 24vh white,   /* Estrella 7 */
+    5vw 39vh white,    /* Estrella 8 */
+    60vw 41vh white,   /* Estrella 9 */
+    30vw 8vh white,    /* Estrella 10 */
+    92vw 62vh white,   /* Estrella 11 */
+    15vw 27vh white,   /* Estrella 12 */
+    78vw 49vh white,   /* Estrella 13 */
+    20vw 61vh white,   /* Estrella 14 */
+    55vw 12vh white,   /* Estrella 15 */
+    85vw 36vh white,   /* Estrella 16 */
+    3vw 45vh white,    /* Estrella 17 */
+    27vw 14vh white,   /* Estrella 18 */
+    73vw 22vh white,   /* Estrella 19 */
+    63vw 65vh white,   /* Estrella 20 */
+    19vw 29vh white,   /* Estrella 21 */
+    39vw 33vh white,   /* Estrella 22 */
+    72vw 55vh white,   /* Estrella 23 */
+    11vw 4vh white,    /* Estrella 24 */
+    53vw 58vh white,   /* Estrella 25 */
+    90vw 25vh white,   /* Estrella 26 */
+    26vw 70vh white,   /* Estrella 27 */
+    33vw 46vh white,   /* Estrella 28 */
+    80vw 50vh white,   /* Estrella 29 */
+    47vw 13vh white,   /* Estrella 30 */
+    9vw 18vh white,    /* Estrella 31 */
+    36vw 2vh white,    /* Estrella 32 */
+    65vw 5vh white,    /* Estrella 33 */
+    50vw 21vh white,   /* Estrella 34 */
+    95vw 8vh white,    /* Estrella 35 */
+    37vw 23vh white,   /* Estrella 36 */
+    88vw 7vh white,    /* Estrella 37 */
+    8vw 30vh white,    /* Estrella 38 */
+    24vw 60vh white,   /* Estrella 39 */
+    99vw 17vh white,   /* Estrella 40 */
+    66vw 48vh white,   /* Estrella 41 */
+    34vw 3vh white,    /* Estrella 42 */
+    14vw 44vh white,   /* Estrella 43 */
+    29vw 11vh white,   /* Estrella 44 */
+    81vw 9vh white,    /* Estrella 45 */
+    58vw 32vh white,   /* Estrella 46 */
+    94vw 64vh white,   /* Estrella 47 */
+    44vw 19vh white,   /* Estrella 48 */
+    91vw 15vh white,   /* Estrella 49 */
+    1vw 37vh white,    /* Estrella 50 */
+    20vw 66vh white,   /* Estrella 51 */
+    54vw 11vh white,   /* Estrella 52 */
+    39vw 26vh white,   /* Estrella 53 */
+    67vw 20vh white,   /* Estrella 54 */
+    42vw 69vh white,   /* Estrella 55 */
+    76vw 35vh white,   /* Estrella 56 */
+    46vw 10vh white,   /* Estrella 57 */
+    4vw 8vh white,     /* Estrella 58 */
+    68vw 12vh white,   /* Estrella 59 */
+    18vw 63vh white,   /* Estrella 60 */
+}
+
+/* Capa de estrellas adicionales (tercera capa) */
+.stars-additional {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 2px;
+    background-color: white;
+    opacity: 0.6; /* Opacidad de la tercera capa */
+    box-shadow:
+    12vw 14vh white,   /* Estrella 1 */
+    18vw 35vh white,   /* Estrella 2 */
+    27vw 22vh white,   /* Estrella 3 */
+    36vw 50vh white,   /* Estrella 4 */
+    44vw 30vh white,   /* Estrella 5 */
+    55vw 42vh white,   /* Estrella 6 */
+    62vw 11vh white,   /* Estrella 7 */
+    73vw 38vh white,   /* Estrella 8 */
+    84vw 48vh white,   /* Estrella 9 */
+    91vw 26vh white,   /* Estrella 10 */
+    6vw 55vh white,    /* Estrella 11 */
+    15vw 67vh white,   /* Estrella 12 */
+    25vw 15vh white,   /* Estrella 13 */
+    34vw 44vh white,   /* Estrella 14 */
+    46vw 24vh white,   /* Estrella 15 */
+    57vw 19vh white,   /* Estrella 16 */
+    68vw 2vh white,    /* Estrella 17 */
+    77vw 12vh white,   /* Estrella 18 */
+    83vw 56vh white,   /* Estrella 19 */
+    97vw 40vh white,   /* Estrella 20 */
+    15vw 45vh white,   /* Estrella 21 */
+    28vw 39vh white,   /* Estrella 22 */
+    59vw 17vh white,   /* Estrella 23 */
+    84vw 34vh white,   /* Estrella 24 */
+    95vw 23vh white,   /* Estrella 25 */
+    10vw 37vh white,   /* Estrella 26 */
+    13vw 29vh white,   /* Estrella 27 */
+    22vw 8vh white,    /* Estrella 28 */
+    41vw 4vh white,    /* Estrella 29 */
+    76vw 50vh white,   /* Estrella 30 */
+    39vw 33vh white,   /* Estrella 31 */
+    45vw 11vh white,   /* Estrella 32 */
+    88vw 60vh white,   /* Estrella 33 */
+    60vw 45vh white,   /* Estrella 34 */
+    81vw 35vh white,   /* Estrella 35 */
+    98vw 14vh white,   /* Estrella 36 */
+    26vw 30vh white,   /* Estrella 37 */
+    55vw 42vh white,   /* Estrella 38 */
+    74vw 48vh white,   /* Estrella 39 */
+    90vw 19vh white;   /* Estrella 40 */
+}
+
+/* Capa de estrellas adicionales (segunda capa) */
+.night::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 3px;
+    background-color: white;
+    opacity: 0.7;
+    box-shadow:
+    8vw 25vh white,    /* Estrella 1 */
+    45vw 15vh white,   /* Estrella 2 */
+    60vw 35vh white,   /* Estrella 3 */
+    23vw 28vh white,   /* Estrella 4 */
+    35vw 40vh white,   /* Estrella 5 */
+    72vw 10vh white,   /* Estrella 6 */
+    5vw 60vh white,    /* Estrella 7 */
+    87vw 22vh white,   /* Estrella 8 */
+    49vw 5vh white,    /* Estrella 9 */
+    67vw 32vh white,   /* Estrella 10 */
+    90vw 14vh white,   /* Estrella 11 */
+    38vw 8vh white,    /* Estrella 12 */
+    78vw 20vh white,   /* Estrella 13 */
+    30vw 26vh white,   /* Estrella 14 */
+    11vw 55vh white,   /* Estrella 15 */
+    56vw 35vh white,   /* Estrella 16 */
+    75vw 44vh white,   /* Estrella 17 */
+    19vw 27vh white,   /* Estrella 18 */
+    42vw 2vh white,    /* Estrella 19 */
+    65vw 48vh white;   /* Estrella 20 */
+    
+    z-index: 2; /* Capa superior */
+}
+
 
 
 //Posición general en la ventana
@@ -1262,7 +1422,7 @@ background-color: var(--dark-color);
 
     100% {
         opacity: 0;
-        transform: translateX(100vw) translateY(100vh);
+        transform: translateX(100vw) translateY(50vh);
     }
 }
 
@@ -1279,45 +1439,64 @@ background-color: var(--dark-color);
 /* Creación de múltiples estrellas fugaces */
 .shooting__stars:nth-child(1) {
     animation-duration: 4s;
-    top: 20%;
-    left: 5%;
+    top: 0%;
+    left: 10%;
 }
 
 .shooting__stars:nth-child(2) {
     animation-duration: 3s;
-    top: 20%;
-    left: 50%;
+    top: 0%;
+    left: 25%;
 }
 
 .shooting__stars:nth-child(3) {
     animation-duration: 6s;
-    top: 30%;
-    left: 80%;
+    top: 0%;
+    left: 40%;
 }
 
 .shooting__stars:nth-child(4) {
     animation-duration: 5s;
-    top: 50%;
-    left: 25%;
+    top: 0%;
+    left: 5%;
 }
 
 .shooting__stars:nth-child(5) {
     animation-duration: 7s;
-    top: 60%;
-    left: 40%;
+    top: 20%;
+    left: 0%;
 }
 
 .shooting__stars:nth-child(6) {
     animation-duration: 4s;
-    top: 70%;
-    left: 70%;
+    top: 30%;
+    left: 0%;
 }
 
 .shooting__stars:nth-child(7) {
     animation-duration: 6s;
-    top: 80%;
-    left: 10%;
+    top: 15%;
+    left: 0%;
 }
+
+.shooting__stars:nth-child(8) {
+    animation-duration: 5s;
+    top: 35%;
+    left: 0%;
+}
+
+.shooting__stars:nth-child(9) {
+    animation-duration: 4s;
+    top: 10%;
+    left: 0%;
+}
+
+.shooting__stars:nth-child(10) {
+    animation-duration: 6s;
+    top: 25%;
+    left: 0%;
+}
+
 
 /* Para pantallas de tablets (de 768px a 1024px) */
 @media (max-width: 1024px) {

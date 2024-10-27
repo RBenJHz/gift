@@ -24,6 +24,7 @@ body {
   height: 80%;
 }
 
+/* Fondo nocturno */
 .night {
   position: fixed;
   left: 50%;
@@ -32,7 +33,48 @@ body {
   width: 100%;
   height: 100%;
   filter: blur(0.1vmin);
-  background-image: radial-gradient(ellipse at top, transparent 0%, var(--dark-color)), radial-gradient(ellipse at bottom, var(--dark-color), rgba(145, 233, 255, 0.2)), repeating-linear-gradient(220deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 19px, transparent 19px, transparent 22px), repeating-linear-gradient(189deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 19px, transparent 19px, transparent 22px), repeating-linear-gradient(148deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 19px, transparent 19px, transparent 22px), linear-gradient(90deg, rgb(0, 255, 250), rgb(240, 240, 240));
+  background-image: radial-gradient(ellipse at top, transparent 0%, var(--dark-color)), radial-gradient(ellipse at bottom, var(--dark-color), rgba(45, 100, 120, 0.2)), linear-gradient(90deg, rgb(0, 125, 130), rgb(120, 120, 120));
+  overflow: hidden;
+}
+
+/* Capa de estrellas (primera capa) */
+.night::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  background-color: white;
+  opacity: 0.5;
+  box-shadow: 12vw 54vh white, 25vw 16vh white, 48vw 38vh white, 10vw 67vh white, 70vw 34vh white, 83vw 59vh white, 40vw 24vh white, 5vw 39vh white, 60vw 41vh white, 30vw 8vh white, 92vw 62vh white, 15vw 27vh white, 78vw 49vh white, 20vw 61vh white, 55vw 12vh white, 85vw 36vh white, 3vw 45vh white, 27vw 14vh white, 73vw 22vh white, 63vw 65vh white, 19vw 29vh white, 39vw 33vh white, 72vw 55vh white, 11vw 4vh white, 53vw 58vh white, 90vw 25vh white, 26vw 70vh white, 33vw 46vh white, 80vw 50vh white, 47vw 13vh white, 9vw 18vh white, 36vw 2vh white, 65vw 5vh white, 50vw 21vh white, 95vw 8vh white, 37vw 23vh white, 88vw 7vh white, 8vw 30vh white, 24vw 60vh white, 99vw 17vh white, 66vw 48vh white, 34vw 3vh white, 14vw 44vh white, 29vw 11vh white, 81vw 9vh white, 58vw 32vh white, 94vw 64vh white, 44vw 19vh white, 91vw 15vh white, 1vw 37vh white, 20vw 66vh white, 54vw 11vh white, 39vw 26vh white, 67vw 20vh white, 42vw 69vh white, 76vw 35vh white, 46vw 10vh white, 4vw 8vh white, 68vw 12vh white, 18vw 63vh white;
+}
+
+/* Capa de estrellas adicionales (tercera capa) */
+.stars-additional {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 2px;
+  background-color: white;
+  opacity: 0.6; /* Opacidad de la tercera capa */
+  box-shadow: 12vw 14vh white, 18vw 35vh white, 27vw 22vh white, 36vw 50vh white, 44vw 30vh white, 55vw 42vh white, 62vw 11vh white, 73vw 38vh white, 84vw 48vh white, 91vw 26vh white, 6vw 55vh white, 15vw 67vh white, 25vw 15vh white, 34vw 44vh white, 46vw 24vh white, 57vw 19vh white, 68vw 2vh white, 77vw 12vh white, 83vw 56vh white, 97vw 40vh white, 15vw 45vh white, 28vw 39vh white, 59vw 17vh white, 84vw 34vh white, 95vw 23vh white, 10vw 37vh white, 13vw 29vh white, 22vw 8vh white, 41vw 4vh white, 76vw 50vh white, 39vw 33vh white, 45vw 11vh white, 88vw 60vh white, 60vw 45vh white, 81vw 35vh white, 98vw 14vh white, 26vw 30vh white, 55vw 42vh white, 74vw 48vh white, 90vw 19vh white; /* Estrella 40 */
+}
+
+/* Capa de estrellas adicionales (segunda capa) */
+.night::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 3px;
+  background-color: white;
+  opacity: 0.7;
+  box-shadow: 8vw 25vh white, 45vw 15vh white, 60vw 35vh white, 23vw 28vh white, 35vw 40vh white, 72vw 10vh white, 5vw 60vh white, 87vw 22vh white, 49vw 5vh white, 67vw 32vh white, 90vw 14vh white, 38vw 8vh white, 78vw 20vh white, 30vw 26vh white, 11vw 55vh white, 56vw 35vh white, 75vw 44vh white, 19vw 27vh white, 42vw 2vh white, 65vw 48vh white; /* Estrella 20 */
+  z-index: 2; /* Capa superior */
 }
 
 .flowers {
@@ -1005,7 +1047,7 @@ body {
   }
   100% {
     opacity: 0;
-    transform: translateX(100vw) translateY(100vh);
+    transform: translateX(100vw) translateY(50vh);
   }
 }
 .shooting__stars {
@@ -1021,44 +1063,62 @@ body {
 /* Creación de múltiples estrellas fugaces */
 .shooting__stars:nth-child(1) {
   animation-duration: 4s;
-  top: 20%;
-  left: 5%;
+  top: 0%;
+  left: 10%;
 }
 
 .shooting__stars:nth-child(2) {
   animation-duration: 3s;
-  top: 20%;
-  left: 50%;
+  top: 0%;
+  left: 25%;
 }
 
 .shooting__stars:nth-child(3) {
   animation-duration: 6s;
-  top: 30%;
-  left: 80%;
+  top: 0%;
+  left: 40%;
 }
 
 .shooting__stars:nth-child(4) {
   animation-duration: 5s;
-  top: 50%;
-  left: 25%;
+  top: 0%;
+  left: 5%;
 }
 
 .shooting__stars:nth-child(5) {
   animation-duration: 7s;
-  top: 60%;
-  left: 40%;
+  top: 20%;
+  left: 0%;
 }
 
 .shooting__stars:nth-child(6) {
   animation-duration: 4s;
-  top: 70%;
-  left: 70%;
+  top: 30%;
+  left: 0%;
 }
 
 .shooting__stars:nth-child(7) {
   animation-duration: 6s;
-  top: 80%;
-  left: 10%;
+  top: 15%;
+  left: 0%;
+}
+
+.shooting__stars:nth-child(8) {
+  animation-duration: 5s;
+  top: 35%;
+  left: 0%;
+}
+
+.shooting__stars:nth-child(9) {
+  animation-duration: 4s;
+  top: 10%;
+  left: 0%;
+}
+
+.shooting__stars:nth-child(10) {
+  animation-duration: 6s;
+  top: 25%;
+  left: 0%;
 }
 
 /* Para pantallas de tablets (de 768px a 1024px) */
