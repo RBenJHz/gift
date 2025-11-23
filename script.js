@@ -160,7 +160,8 @@ document.addEventListener("mousemove", (event) => {
     "sounds/Payphone.m4a",
     "sounds/Lovely.m4a",
     "sounds/Hymn for the weekend.m4a",
-    "sounds/Stitches.m4a"
+    "sounds/Stitches.m4a",
+    "spunds/Everything i wanted.mp3"
   ];
 
   let currentSongIndex = Math.floor(Math.random() * songs.length); // Canción aleatoria al cargar
