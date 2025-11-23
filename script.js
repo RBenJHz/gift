@@ -161,7 +161,7 @@ document.addEventListener("mousemove", (event) => {
     "sounds/Lovely.m4a",
     "sounds/Hymn for the weekend.m4a",
     "sounds/Stitches.m4a",
-    "spunds/Everything i wanted.mp3"
+    "sounds/Everything i wanted.mp3"
   ];
 
   let currentSongIndex = Math.floor(Math.random() * songs.length); // Canción aleatoria al cargar
